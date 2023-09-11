@@ -1,9 +1,5 @@
-data "aws_ami" "ubuntu"{
-    most_recent = true
-}
-
 resource "aws_instance" "ec2" {
-ami = data.aws_ami.ubuntu
+ami = "ami-053b0d53c279acc90"
 instance_type = "t3.micro"
 
 tags = {
